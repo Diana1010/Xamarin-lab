@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinLab.Pages.AddRolePage"
+             Title="Add Role">
+
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <StackLayout>
+                <BoxView x:Name="RoleColorBox" VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="50" HeightRequest="50"/>
+                <Button Text="Choose role color" Clicked="ChooseColor_Clicked" HorizontalOptions="CenterAndExpand"></Button>
+            </StackLayout>
+
+
+            <Entry x:Name="NameEntry" Placeholder="Role name" FontSize="Medium"/>
+            <Picker x:Name="Picker" FontSize="Medium" SelectedIndexChanged="Picker_OnSelectedIndexChangedicker_SelectedIndexChanged" Title="Choose Access Level">
+                <Picker.Items>
+                    <x:String>Read Only</x:String>
+                    <x:String>Can Create Tasks</x:String>
+                    <x:String>Can Create and Close Tasks</x:String>
+                    <x:String>Can Create Roles</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

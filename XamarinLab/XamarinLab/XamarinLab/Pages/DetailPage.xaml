@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinLab.Pages.DetailPage"
+             Title="Details">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <BoxView x:Name="RoleColorBox" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center" Margin="10"/>
+                <Frame>
+                    <Label x:Name="NameLabel" FontSize="Medium" TextColor="Black"/>
+                </Frame>
+                <Label x:Name="OutdatedLabel" Text="OUTDATED" TextColor="Red" IsVisible="False" HorizontalOptions="Center"/>
+                <Frame>
+                    <StackLayout>
+                        <Label Text="Priority:"/>
+                        <Label x:Name="PriorityLabel" TextColor="Black"/>
+                        <Label Text="For Role:"/>
+                        <Label x:Name="RoleLabel" TextColor="Black"/>
+                        <Label Text="Created Date:"/>
+                        <Label x:Name="CreatedDateLabel" TextColor="Black"/>
+
+                        <Label Text="Expiration Date:"/>
+                        <Label x:Name="ExpirationDateLabel" TextColor="Black"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Editor x:Name="DescriptionEditor" AutoSize="TextChanges" IsEnabled="False"/>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
